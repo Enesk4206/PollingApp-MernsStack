@@ -44,7 +44,7 @@ const CreatePoll = () => {
       return;
     }
     valueHandleChange("error", "");
-    console.log("NO_ERR", { pollData })
+    console.log("NO_ERR", { pollData });
 
   }
 
