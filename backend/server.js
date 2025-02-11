@@ -5,6 +5,7 @@ const cors = require("cors");
 const path = require("path");
 const connectDB = require("./config/db.js");
 const authRoutes = require("./routes/authRoutes.js");
+const pollRoutes = require("./routes/pollRoutes.js");
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.json());
 connectDB()
 
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/poll", pollRoutes)
 
 app.use("/uploads",express.static(path.join(__dirname, "uploads")));
 
